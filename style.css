@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: gold;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    position: absolute;
+    left: 30px; /* Keeps logo on the left */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: gold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Page Content */
+.content {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* Makes it take full viewport height */
+    text-align: center;
+}
+
+/* Adjust position of text */
+.landing-content {
+    margin-top: 10px; /* Moves content lower */
+}
+
+.landing-content h1 {
+    font-size: 2.5rem;
+    color: gold;
+}
+
+.landing-content p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.homepage-gif {
+    display: block;
+    margin: 200px auto;
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: Adds smooth edges */
+}
