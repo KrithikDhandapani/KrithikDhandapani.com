@@ -82,8 +82,30 @@ body {
 
 .homepage-gif {
     display: block;
-    margin: 200px auto;
-    width: 300px; /* Adjust size as needed */
+    margin: 100px auto;
+    width: 200px; /* Adjust size as needed */
     height: auto;
     border-radius: 10px; /* Optional: Adds smooth edges */
+}
+
+.text-container {
+    width: 40%; /* Adjust width as needed */
+    margin: 80px auto 0 auto; /* Moves the text down */
+    text-align: center; /* Centers the text inside */
+    padding-top: 50px; /* Additional spacing if needed */
+}
+
+.profile-pic {
+    display: block;
+    margin: 50px auto; /* Centers the image and moves it down */
+    width: 250px; /* Adjust size as needed */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 80%; /* Makes it circular */
+}
+
+.education {
+    margin-top: 90px; /* Adds space between main text and education */
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Makes text stand out */
+    color: #c77904; /* Slightly darker text */
 }
