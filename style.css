@@ -107,16 +107,16 @@ body {
     margin-top: 90px; /* Adds space between main text and education */
     font-size: 18px; /* Adjust font size */
     font-weight: bold; /* Makes text stand out */
-    color: #c77904; /* Slightly darker text */
+    color: #c77904; 
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     justify-content: center;
     align-items: center;
-    max-width: 800px; /* Prevents stretching */
+    max-width: 800px; 
     margin: 30px auto;
 }
 
@@ -135,3 +135,53 @@ body {
     background: gold;
     color: black;
 }
+
+.skills-container {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 30px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background-color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    white-space: nowrap;
+    transition: width 0.6s ease-in-out;
+}
+
+.skill-name {
+    position: absolute;
+    left: 10px;
+    color: black;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.skill-percent {
+    position: absolute;
+    right: 10px;
+    color: gold;
+    font-weight: bold;
+    z-index: 2;
+}
+
