@@ -109,3 +109,29 @@ body {
     font-weight: bold; /* Makes text stand out */
     color: #c77904; /* Slightly darker text */
 }
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* Prevents stretching */
+    margin: 30px auto;
+}
+
+.project-button {
+    background: transparent;
+    border: 2px solid gold;
+    color: gold;
+    font-size: 18px;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    background: gold;
+    color: black;
+}
