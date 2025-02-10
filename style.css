@@ -251,5 +251,13 @@ body {
 
 }
 
+.AIEAInfo{
+    width: 40%; /* Adjust width as needed */
+    margin: 40px auto 0 auto; /* Moves the text down */
+    text-align: center; /* Centers the text inside */
+    padding-top: 50px; /* Additional spacing if needed */
+}
+
+
 
 
