@@ -259,6 +259,69 @@ body {
     padding-top: 50px; /* Additional spacing if needed */
 }
 
+.project-info-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: gold;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info-section {
+    flex: 1;
+    text-align: center;
+    padding: 5px 10px;
+    border-right: 2px solid gold;
+}
+
+.info-section:last-child {
+    border-right: none;
+}
+
+.info{
+    width: 50%; /* Adjust width as needed */
+    margin: 30px auto 0 auto; /* Moves the text down */
+    text-align: center; /* Centers the text inside */
+    padding-top:20px; /* Additional spacing if needed */
+}
+
+.UntitledValveProjectImage {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;  /* Moves the image lower */
+}
+
+.UntitledValveProjectImage img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.project-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.project-image-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-image-button img {
+    width: 200px;  /* Adjust size */
+    height: auto;
+}
+
+.project-image-button:hover {
+    transform: scale(1.1);
+}
+
 
 
 
