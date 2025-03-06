@@ -322,6 +322,29 @@ body {
     transform: scale(1.1);
 }
 
+.resume-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: gold;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid gold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.resume-button:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.1);
+}
+
 
 
 
