@@ -345,6 +345,40 @@ body {
     transform: scale(1.1);
 }
 
+/* Glow */
+ /*h1{
+    text-shadow: 0 0 20px gold, 0 0 5px rgba(255, 215, 0, 2.2);
+    font-family: 'MyFont', sans-serif;
+    font-size: 42px;
+
+} 
+*/
+h1, h2 {
+    /* text-shadow: 0 0 20px gold, 0 0 5px rgba(255, 215, 0, 2.2); */
+    font-family: 'MyFont', sans-serif;
+    font-size: 72px;
+
+} 
+li {
+    /* text-shadow: 0 0 20px gold, 0 0 5px rgba(255, 215, 0, 2.2); */
+    font-family: 'MyFont', sans-serif;
+    font-size: 25px;
+
+}
+.logo {
+    font-size: 40px;
+    font-family: 'MyFont', sans-serif;
+    display: inline-block; /* Needed to make border fit only the text */
+    border-bottom: 5px solid gold;
+    padding-bottom: -3px; /* Optional: adds a little space */
+
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('assets/PixelFont.ttf') format('truetype');
+}
+
 
 
 
