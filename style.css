@@ -1,11 +1,14 @@
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
+    background: linear-gradient(-45deg, #000000, #1a1a1a, #333300, #000000);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
     color: gold;
-    text-align: center;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Navbar */
@@ -24,7 +27,7 @@ body {
 
 .logo {
     position: absolute;
-    left: 30px; /* Keeps logo on the left */
+    left: 30px; 
     font-size: 1.5rem;
     font-weight: bold;
     color: gold;
@@ -377,12 +380,12 @@ p {
 
 @font-face {
     font-family: 'MyFont';
-    src: url('assets/PixelFont.ttf') format('truetype');
+    src: url('assets/PrimaryFont.otf') format('truetype');
 }
 
 @font-face {
     font-family: 'SecondFont';
-    src: url('assets/SecondFont.ttf') format('truetype');
+    src: url('assets/SecondaryFont.ttf') format('truetype');
 }
 
 .experience-container {
