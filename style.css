@@ -133,7 +133,10 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     text-decoration: none;
+    width: 400px; /* adjust box size */
+    display: inline-block;
 }
+
 
 .project-button:hover {
     background: gold;
@@ -445,6 +448,7 @@ ul li::before {
     left: 0;
     top: 2px;
 }
+
 
 
 
