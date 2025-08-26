@@ -1,329 +1,119 @@
-/* General Styles */
+/* =========================
+   GENERAL STYLES
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&family=Oswald:wght@500;700&display=swap');
+
 body {
-    background: linear-gradient(-45deg, #000000, #1a1a1a, #333300, #000000);
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
-    color: gold;
-}
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    background-color: #1f1f1f; /* Dark charcoal */
+    color: #f5f2e7;           /* Warm ivory */
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 20px;
 }
 
-/* Navbar */
+/* Headings */
+h1, h2, h3, .logo {
+    font-family: 'Oswald', sans-serif;
+    color: #f5f2e7;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+/* Links */
+a {
+    color: #cba135; /* subtle gold accent */
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #f5f2e7;
+    text-decoration: underline;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* logo left, nav links right */
     align-items: center;
-    background-color: #111;
-    padding: 15px 10px;
+    padding: 15px 40px;
+    background-color: #1f1f1f;
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     z-index: 1000;
 }
 
 .logo {
-    position: absolute;
-    left: 30px; 
-    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
     font-weight: bold;
-    color: gold;
+    color: #f5f2e7;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin-right: 60px;
 }
 
-.nav-links li {
-    display: inline;
-}
 
 .nav-links a {
-    text-decoration: none;
-    color: gold;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 500;
+    font-size: 16px;
 }
 
-.nav-links a:hover {
-    color: white;
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* stack logo and links */
+        align-items: flex-start; /* align everything to the left */
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* stack links vertically */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
 }
 
-/* Page Content */
+
+/* =========================
+   LANDING PAGE
+========================= */
 .content {
-    padding-top: 100px;
+    padding-top: 120px; /* to offset navbar */
     text-align: center;
-}
-
-.landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh; /* Makes it take full viewport height */
-    text-align: center;
-}
-
-/* Adjust position of text */
-.landing-content {
-    margin-top: 10px; /* Moves content lower */
-}
-
-.landing-content h1 {
-    font-size: 2.5rem;
-    color: gold;
-}
-
-.landing-content p {
-    font-size: 1.2rem;
-    color: white;
 }
 
 .homepage-gif {
     display: block;
-    margin: 100px auto;
-    width: 200px; /* Adjust size as needed */
+    margin: 50px auto;
+    width: 180px;
     height: auto;
-    border-radius: 10px; /* Optional: Adds smooth edges */
-}
-
-.text-container {
-    width: 40%; /* Adjust width as needed */
-    margin: 80px auto 0 auto; /* Moves the text down */
-    text-align: center; /* Centers the text inside */
-    padding-top: 50px; /* Additional spacing if needed */
-}
-
-.profile-pic {
-    display: block;
-    margin: 50px auto; /* Centers the image and moves it down */
-    width: 250px; /* Adjust size as needed */
-    height: auto; /* Keeps aspect ratio */
-    border-radius: 80%; /* Makes it circular */
-}
-
-.education {
-    margin-top: 90px; /* Adds space between main text and education */
-    font-size: 18px; /* Adjust font size */
-    font-weight: bold; /* Makes text stand out */
-    color: #c77904; 
-}
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px; 
-    margin: 30px auto;
-}
-
-.project-button {
-    background: transparent;
-    border: 2px solid gold;
-    color: gold;
-    font-size: 18px;
-    padding: 12px 24px;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    width: 400px; /* adjust box size */
-    display: inline-block;
-}
-
-
-.project-button:hover {
-    background: gold;
-    color: black;
-}
-
-.skills-container {
-    width: 60%;
-    margin: 30px auto;
-}
-
-.skill {
-    margin-bottom: 15px;
-}
-
-.skill-bar {
-    width: 100%;
-    height: 30px;
-    border: 2px solid gold;
-    border-radius: 5px;
-    background-color: black;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    overflow: hidden;
-}
-
-.skill-fill {
-    height: 100%;
-    background-color: gold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    white-space: nowrap;
-    transition: width 0.6s ease-in-out;
-}
-
-.skill-name {
-    position: absolute;
-    left: 10px;
-    color: black;
-    font-weight: bold;
-    z-index: 2;
-}
-
-.skill-percent {
-    position: absolute;
-    right: 10px;
-    color: gold;
-    font-weight: bold;
-    z-index: 2;
-}
-
-.research-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.research-btn {
-    display: block;
-    width: 30%;
-    padding: 15px;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    background-color: gold;
-    border: 2px solid gold;
     border-radius: 10px;
-    transition: 0.3s ease-in-out;
 }
 
-.research-btn:hover {
-    background-color: black;
-    color: gold;
-    border: 2px solid gold;
-}
-
-.research-role {
-    font-size: 0.9em;
-    font-weight: normal;
-    display: block;
-    margin-top: 5px;
-}
-
-
-
-.back-button {
-    position: absolute;
-    top: 120px;
-    left: 25px;
-    padding: 5px 15px;
-    font-size: 40px;
-    background-color: gold;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.back-button:hover {
-    background-color: black;
-    color: gold;
-    border: 2px solid gold;
-
-}
-
-.AIEAInfo{
-    width: 40%; /* Adjust width as needed */
-    margin: 40px auto 0 auto; /* Moves the text down */
-    text-align: center; /* Centers the text inside */
-    padding-top: 50px; /* Additional spacing if needed */
-}
-
-.project-info-bar {
-    display: flex;
-    justify-content: space-around;
-    background-color: black;
-    color: gold;
-    padding: 10px;
-    border-radius: 8px;
-    margin: 15px 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.info-section {
-    flex: 1;
-    text-align: center;
-    padding: 5px 10px;
-    border-right: 2px solid gold;
-}
-
-.info-section:last-child {
-    border-right: none;
-}
-
-.info{
-    width: 50%; /* Adjust width as needed */
-    margin: 30px auto 0 auto; /* Moves the text down */
-    text-align: center; /* Centers the text inside */
-    padding-top:20px; /* Additional spacing if needed */
-}
-
-.UntitledValveProjectImage {
-    display: flex;
-    justify-content: center;
-    margin-top: 90px;  /* Moves the image lower */
-}
-
-.UntitledValveProjectImage img {
-    width: 40%;
-    border-radius: 8px;
-}
-
-.project-button-container {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-
-.project-image-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.project-image-button img {
-    width: 200px;  /* Adjust size */
-    height: auto;
-}
-
-.project-image-button:hover {
-    transform: scale(1.1);
-}
-
+/* Resume Button */
 .resume-button-container {
     text-align: center;
     margin-top: 20px;
@@ -331,125 +121,269 @@ body {
 
 .resume-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: black;
-    color: gold;
+    padding: 12px 24px;
+    background-color: #e6c07b;
+    color: #1a1a1a;
     font-weight: bold;
     text-decoration: none;
-    border: 2px solid gold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 6px;
+    transition: 0.3s ease;
 }
 
 .resume-button:hover {
-    background-color: gold;
-    color: black;
-    transform: scale(1.1);
-}
-
-/* Glow */
- /*h1{
-    text-shadow: 0 0 20px gold, 0 0 5px rgba(255, 215, 0, 2.2);
-    font-family: 'MyFont', sans-serif;
-    font-size: 42px;
-
-} 
-*/
-h1, h2 {
-    /* text-shadow: 0 0 20px gold, 0 0 5px rgba(255, 215, 0, 2.2); */
-    font-family: 'MyFont', sans-serif;
-    font-size: 72px;
-
-} 
-li {
-    /* text-shadow: 0 0 20px gold, 0 0 5px rgba(255, 215, 0, 2.2); */
-    font-family: 'MyFont', sans-serif;
-    font-size: 30px;
+    background-color: #c9a84c;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 
 }
 
-.logo {
-    font-size: 40px;
-    font-family: 'MyFont', sans-serif;
-    display: inline-block; /* Needed to make border fit only the text */
-    border-bottom: 5px solid gold;
-    padding-bottom: -3px; /* Optional: adds a little space */
-
-}
-p {
-    font-family: 'SecondFont', sans-serif;
-    font-size: 20px; /* Adjust size as needed */
-}
-
-@font-face {
-    font-family: 'MyFont';
-    src: url('assets/PrimaryFont.otf') format('truetype');
+/* =========================
+   PROJECTS PAGE
+========================= */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 600px; /* keeps layout centered and narrow */
 }
 
-@font-face {
-    font-family: 'SecondFont';
-    src: url('assets/SecondaryFont.ttf') format('truetype');
+.project-box {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(203, 161, 53, 0.4);
+}
+
+.project-button {
+    display: block;
+    width: 100%; /* full width inside container */
+    padding: 15px 20px;
+    font-family: 'SansSerifElegant', sans-serif; /* elegant font for buttons */
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a; /* text color (dark) */
+    background-color: #e6c07b; /* light gold tone */
+    border: 2px solid #c9a84c; /* subtle gold border */
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.project-button:hover {
+    background-color: #c9a84c; /* darker gold on hover */
+    color: #ffffff; /* text becomes white on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   EXPERIENCE PAGE
+========================= */
 .experience-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 80px;
+    padding: 0 20px;
 }
 
 .experience-box {
-    width: 80%;
+    width: 90%;
     max-width: 800px;
-    background-color: transparent;
-    padding: 15px;
-    border: 4px solid gold;  /* Outer border */
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-    position: relative;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .inner-box {
-    background-color: black;
+    background-color: #1f1f1f;
     padding: 20px;
-    border: 3px solid gold;  /* Inner border */
-    box-shadow: inset 0 0 5px rgba(255, 215, 0, 0.8);
+    border-radius: 8px;
+    border: 1px solid #cba135;
 }
 
 .company-logo {
-    width: 80px;
+    width: 60px;
     height: auto;
     display: block;
     margin: 0 auto 10px;
 }
 
-h2, h3 {
-    text-align: center;
-    color: gold;
-}
-
 ul {
     list-style: none;
     padding: 0;
-    color: white;
 }
 
 ul li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     padding-left: 15px;
     position: relative;
 }
 
 ul li::before {
-    content: "•"; 
-    color: gold;
-    font-size: 20px;
+    content: "•";
+    color: #cba135;
+    font-size: 18px;
     position: absolute;
     left: 0;
     top: 2px;
 }
 
+/* =========================
+   SKILLS PAGE
+========================= */
+.skills-container {
+    width: 60%;
+    margin: 50px auto;
+}
 
+.skill-bar {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid #cba135;
+}
 
+.skill-fill {
+    height: 100%;
+    background-color: #cba135;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
 
+/* =========================
+   GENERAL BUTTONS
+========================= */
+.button {
+    background-color: #cba135;
+    color: #1f1f1f;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease;
+}
 
+.button:hover {
+    background-color: #f5f2e7;
+    color: #1f1f1f;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   IMAGES
+========================= */
+.profile-pic {
+    display: block;
+    margin: 30px auto;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.UntitledValveProjectImage img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+}
+
+/* Research Page Buttons - Match Projects Page */
+.research-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid gold;
+    color: gold;
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 300px;       /* Same fixed width as project buttons */
+    border-radius: 6px;
+}
+
+.research-btn:hover {
+    background-color: gold;
+    color: black;
+}
+
+.AboutMe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 900px; /* keeps layout centered and narrow */
+}
+
+.subText-container{
+    color: #cba135; /* subtle gold accent */
+
+}
+
+.github-container{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 600px; /* keeps layout centered and narrow */
+}
+
+.github-button{
+    display: inline-block;
+    width: 100%; /* full width inside container */
+    padding: 10px 20px;
+    font-family: 'SansSerifElegant', sans-serif; /* elegant font for buttons */
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a; /* text color (dark) */
+    background-color: #e6c07b; /* light gold tone */
+    border: 2px solid #c9a84c; /* subtle gold border */
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.github-button:hover {
+    background-color: #c9a84c; /* darker gold on hover */
+    color: #ffffff; /* text becomes white on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
